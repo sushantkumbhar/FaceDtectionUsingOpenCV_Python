@@ -10,31 +10,21 @@ camera = cv2.VideoCapture(0)
 # Load a sample picture and learn how to recognize it.
 sushant_image = face_recognition.load_image_file("Sushant/Sushant.jpg")
 sushant_face_encoding = face_recognition.face_encodings(sushant_image)[0]
-
-# Load a sample picture and learn how to recognize it.
-abhay_image = face_recognition.load_image_file("Abhay/Abhay.jpg")
-abhay_face_encoding = face_recognition.face_encodings(abhay_image)[0]
-
-# Load a sample picture and learn how to recognize it.
-mohsin_image = face_recognition.load_image_file("Mohsin/Mohsin.jpg")
-mohsin_face_encoding = face_recognition.face_encodings(mohsin_image)[0]
-
-# Load a second sample picture and learn how to recognize it.
-bradley_image = face_recognition.load_image_file("Bradley/bradley.jpg")
+bradley_image = face_recognition.load_image_file("bradley/bradley.jpg")
 bradley_face_encoding = face_recognition.face_encodings(bradley_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    sushant_face_encoding,
+  
     bradley_face_encoding,
-    abhay_face_encoding,
-    mohsin_face_encoding
+    sushant_face_encoding
+   
 ]
 known_face_names = [
-    "Sushant",
+  
     "Bradly",
-    "Abhay",
-    "Mohsin"
+    "Sushant"
+  
 ]
 # Initialize some variables
 face_locations = []
